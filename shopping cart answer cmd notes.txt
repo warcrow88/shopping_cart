@@ -1,0 +1,35 @@
+Microsoft Windows [Version 10.0.17134.285]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\kelle>cd C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git init
+Initialized empty Git repository in C:/Users/kelle/Documents/Coding Temple Course 2018/week_7_folder/SHOPPING_CART_ANSWER/.git/
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git add .
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   assets/products.json
+        new file:   components/header.html
+        new file:   index.html
+        new file:   static/css/main.css
+        new file:   static/js/app.js
+
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git commit -m "initial Commit"
+[master (root-commit) 9a74924] initial Commit
+ 5 files changed, 70 insertions(+)
+ create mode 100644 assets/products.json
+ create mode 100644 components/header.html
+ create mode 100644 index.html
+ create mode 100644 static/css/main.css
+ create mode 100644 static/js/app.js
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>
