@@ -32,4 +32,60 @@ C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_A
  create mode 100644 static/css/main.css
  create mode 100644 static/js/app.js
 
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   components/header.html
+        modified:   index.html
+        modified:   static/js/app.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        shopping cart answer cmd notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git commit -m "added functionality to display navbar from header.html component."
+On branch master
+Changes not staged for commit:
+        modified:   components/header.html
+        modified:   index.html
+        modified:   static/js/app.js
+
+Untracked files:
+        shopping cart answer cmd notes.txt
+
+no changes added to commit
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git add .
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git commit -m "Added correct navbar"
+[master 4a2a35c] Added correct navbar
+ 4 files changed, 77 insertions(+), 1 deletion(-)
+ create mode 100644 shopping cart answer cmd notes.txt
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git checkout -b
+error: switch `b' requires a value
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git checkout -b layout
+Switched to a new branch 'layout'
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git status
+On branch layout
+nothing to commit, working tree clean
+
+C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>git branch
+* layout
+  master
+
 C:\Users\kelle\Documents\Coding Temple Course 2018\week_7_folder\SHOPPING_CART_ANSWER>

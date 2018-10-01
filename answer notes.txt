@@ -1,0 +1,16 @@
+Steps
+
+Create folder and file structure
+Create local git repository using CMD
+Insert navbar form header.html using the JQuery $.get() method
+Create proper layout for product cards and cart
+Create functionality to show products from JSON file using JQUery and creating a card form each product
+Create cart to show properly
+Create functionality for adding products to cart
+Create functionality shopping cart display
+Create functionality for remove products from cart
+Calculate the total amount
+Display total properly where necessary
+Check for duplicate products in cart
+
+
