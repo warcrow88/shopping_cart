@@ -2,6 +2,11 @@
 // TODO: replace global variable with cloud database later
 var cart = [];
 
+// if cart is empty, dont show Cart
+if (cart.length === 0) {
+  $("#cart").css("display", "none");
+}
+
 
 // get navbar
 $.get('./components/header.html', function(response) {
@@ -75,6 +80,12 @@ function addToCart(id) {
 
 function showCart() {
   // console.log(cart);
+  // if cart is empty dont show, otherwise showCart
+  if (cart.length === 0) {
+    $("#cart").css("display", "none");
+  } else {
+    $("#cart").css("display", "block");
+  }
   // define html variable to be inseeted inot tbody
   let html = "";
   // loop thorugh all products in Cart
