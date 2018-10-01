@@ -32,7 +32,7 @@ function showProducts(response) {
       <div class="card-text">${products[i].description}</div>
       <button onclick="addToCart(${products[i].id})" class="btn btn-primary">Add To Cart</button>
     </div> <!-- End of card -->
-    `
+    `;
     // close row after three products have been added
     // because 0,1,2 is a row, use i+1 to check if your are at the end of the row
     if ((i + 1) % 3 == 0) {
@@ -47,7 +47,7 @@ function showProducts(response) {
 
 $.get('./assets/products.json', showProducts);
 
-// TODO: add functionality later
+
 function addToCart(id) {
   console.log(id);
   $.get('./assets/products.json', function(res) {
@@ -64,5 +64,36 @@ function addToCart(id) {
     }
 
   });
-  console.log(cart);
+  // call showCart to update table
+  // Delay for a bit to allow the above function to complete before the show cart function - if you don't, it won't display because the progrma is trying to do two fucntions nearly simuilataneouosly
+  sleep(50).then(() => {
+      // Do something after the sleep!
+    showCart();
+  })
+
+}
+
+function showCart() {
+  // console.log(cart);
+  // define html variable to be inseeted inot tbody
+  let html = "";
+  // loop thorugh all products in Cart
+  // TODO change total to be qty * price
+  for (let i=0; i<cart.length; i++) {
+    html += `
+    <tr>
+      <td>1</td>
+      <td>${cart[i].title}</td>
+      <td>$${cart[i].price}</td>
+      <td>$${cart[i].price}</td>
+    </tr>
+    `;
+  }
+  // iject html variabel into table-tbody
+  $("#table-body").html(html);
+}
+
+// https://zeit.co/blog/async-and-await
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
 }
