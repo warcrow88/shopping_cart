@@ -74,6 +74,7 @@ function addToCart(id) {
   sleep(50).then(() => {
       // Do something after the sleep!
     showCart();
+    displayTotal();
   });
 
 }
@@ -121,8 +122,28 @@ function removeFromCart(id) {
   sleep(50).then(() => {
       // Do something after the sleep!
     showCart();
+    displayTotal();
   });
 }
+
+function getTotal() {
+  let total = 0;
+  // loop through products in cart and add prices
+  for (let i=0; i<cart.length; i++) {
+    total += cart[i].price;
+  }
+  return total.toFixed(2);
+}
+// display correct total in proper locations
+function displayTotal() {
+  //get total and store in variable
+  let total = getTotal();
+  // chnage total in navbar
+  $("#nav-total").text(`Total: $${total}`)
+  // change total in cart
+  $("#cart-total").text(`$${total}`)
+}
+
 
 // https://zeit.co/blog/async-and-await
 function sleep (time) {
