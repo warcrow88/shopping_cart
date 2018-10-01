@@ -69,7 +69,7 @@ function addToCart(id) {
   sleep(50).then(() => {
       // Do something after the sleep!
     showCart();
-  })
+  });
 
 }
 
@@ -86,11 +86,31 @@ function showCart() {
       <td>${cart[i].title}</td>
       <td>$${cart[i].price}</td>
       <td>$${cart[i].price}</td>
+      <td><button onclick="removeFromCart(${cart[i].id})" class="btn btn-danger">X</button></td>
     </tr>
     `;
   }
   // iject html variabel into table-tbody
   $("#table-body").html(html);
+}
+
+function removeFromCart(id) {
+  // loop through products in cart and remove one instance of id
+  for (let i=0; i<cart.length; i++) {
+    // check current product for id passed in
+    if (cart[i].id == id) {
+      // splice (remove) current product at the instance i
+      cart.splice(i, 1);
+      break; // because you only want to remove one, not all the instnaces of this product
+    };
+  }
+  // then run showCart to show the updated cart
+  // call showCart to update table
+  // Delay for a bit to allow the above function to complete before the show cart function - if you don't, it won't display because the progrma is trying to do two fucntions nearly simuilataneouosly
+  sleep(50).then(() => {
+      // Do something after the sleep!
+    showCart();
+  });
 }
 
 // https://zeit.co/blog/async-and-await
