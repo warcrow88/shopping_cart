@@ -1,3 +1,8 @@
+// global cart variable
+// TODO: replace global variable with cloud database later
+var cart = [];
+
+
 // get navbar
 $.get('./components/header.html', function(response) {
   $("#nav").html(response);
@@ -8,7 +13,7 @@ function showProducts(response) {
   // console.log(response);
   // define local variables for headers and html
   // let headers = Object.keys(response.products[0]);
-  let products = response.products
+  let products = response.products;
   // id, title, price, desc are all the same for all the showProducts
   let html = "";
   // loop through products and create card for each
@@ -31,7 +36,7 @@ function showProducts(response) {
     // close row after three products have been added
     // because 0,1,2 is a row, use i+1 to check if your are at the end of the row
     if ((i + 1) % 3 == 0) {
-      html += '</div>'
+      html += '</div>';
     }
   }
   // inject html string into products using the html variable we created above
@@ -45,4 +50,19 @@ $.get('./assets/products.json', showProducts);
 // TODO: add functionality later
 function addToCart(id) {
   console.log(id);
+  $.get('./assets/products.json', function(res) {
+    let products = res.products; // array from json file
+    // loop thorugh product array to find correct id
+    for (let i=0; i<products.length; i++) {
+      // check current product id to id parameter passed from above function
+      if (products[i].id == id) {
+        //add product to global cart
+        cart.push(products[i]);
+        break; // don't keep looking if you found it...
+
+      }
+    }
+
+  });
+  console.log(cart);
 }
